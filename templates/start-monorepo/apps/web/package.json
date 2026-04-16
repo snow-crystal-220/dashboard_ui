@@ -18,7 +18,7 @@
     "@tanstack/router-plugin": "^1.132.0",
     "@workspace/ui": "workspace:*",
     "nitro": "latest",
-    "react": "^19.2.4",
+    "react": "^19.2.5",
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.1.18",
     "vite-tsconfig-paths": "^5.1.4"
