@@ -14,6 +14,11 @@ import { Toaster } from "@/registry/bases/radix/ui/sonner"
 import { TooltipProvider as RadixTooltipProvider } from "@/registry/bases/radix/ui/tooltip"
 
 import "@/app/globals.css"
+import { Inter, Geist_Mono } from "next/font/google";
+
+const geistMono = Geist_Mono({subsets:['latin'],variable:'--font-mono'});
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: {
@@ -72,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={fontVariables}>
+    <html lang="en" suppressHydrationWarning className={cn(fontVariables, inter.variable, "font-mono", geistMono.variable)}>
       <head>
         <script
           dangerouslySetInnerHTML={{
