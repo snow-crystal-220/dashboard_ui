@@ -32,8 +32,8 @@ export const schema = z.object({
 function StatusBadge({ status }: { status: string }) {
   if (status === "Completed") {
     return (
-      <Badge variant="outline" className="gap-1.5 px-2 text-muted-foreground">
-        <IconCircleCheckFilled className="size-4 fill-green-500 dark:fill-green-400" />
+      <Badge className="gap-1.5 border-green-200 bg-green-100 text-green-700 hover:bg-green-100">
+        <IconCircleCheckFilled className="size-4 fill-green-600" />
         {status}
       </Badge>
     )
@@ -41,16 +41,25 @@ function StatusBadge({ status }: { status: string }) {
 
   if (status === "Blocked") {
     return (
-      <Badge variant="outline" className="gap-1.5 px-2 text-muted-foreground">
-        <IconAlertCircle className="size-4 text-red-500" />
+      <Badge className="gap-1.5 border-red-200 bg-red-100 text-red-700 hover:bg-red-100">
+        <IconAlertCircle className="size-4" />
         {status}
       </Badge>
     )
   }
 
-  if (status === "In Progress" || status === "Testing") {
+  if (status === "In Progress") {
     return (
-      <Badge variant="outline" className="gap-1.5 px-2 text-muted-foreground">
+      <Badge className="gap-1.5 border-blue-200 bg-blue-100 text-blue-700 hover:bg-blue-100">
+        <IconProgress className="size-4" />
+        {status}
+      </Badge>
+    )
+  }
+
+  if (status === "Testing") {
+    return (
+      <Badge className="gap-1.5 border-yellow-200 bg-yellow-100 text-yellow-700 hover:bg-yellow-100">
         <IconProgress className="size-4" />
         {status}
       </Badge>
