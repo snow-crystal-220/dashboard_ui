@@ -12,7 +12,7 @@ export function SiteHeader() {
             <h1 className="truncate text-base font-medium md:text-lg">
               Website Redesign Dashboard
             </h1>
-            <Badge variant="outline">In Progress</Badge>
+            <Badge className="border-blue-200 bg-blue-100 text-blue-700 hover:bg-blue-100">In Progress</Badge>
           </div>
           <p className="text-muted-foreground text-sm">
             Acme Inc. · Start Date: Apr 1, 2026 · Expected Completion: May 15, 2026
